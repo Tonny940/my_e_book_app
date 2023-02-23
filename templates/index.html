@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo.jpg' %}">
+    <meta charset="UTF-8">
+    <title>E-library</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img width="150px"
+                         src="{% static 'images/logo.jpg' %}" alt="img">
+                </a>
+
+            </div>
+            <a id="home-link" href="{% url 'index' %}">
+                <i>E-Library</i>
+            </a>
+            <div class="nav-links">
+                <ul class="nav-group">
+
+                    <li class="nav-item"><a href="{% url 'about_page' %}"><i>About</i></a></li>
+                    <li class="nav-item"><a href="{% url 'catalogue' %}"><i>Collection</i></a></li>
+                    <li class="nav-item"><a href="{% url 'login' %}"><i>Log in</i></a></li>
+                    <li class="nav-item"><a href="{% url 'register' %}"><i>Register</i></a></li>
+                    <li class="nav-item"><a href="{% url 'profile-details' %}"><i>Profile</i></a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <el><img width="150px" src="{% static 'images/logo.jpg' %}"></el>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+{% block content %}
+{% endblock %}
+
+
+<footer>
+    <p id="footer">All writhes reserved!</p>
+</footer>
+</body>
+
+</html>

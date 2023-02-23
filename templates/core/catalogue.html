@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{#    Multiple this card for each book in database#}
+    <main>
+        <div class="book-card">
+    <img src="" alt="book photo" />
+    <p>
+        <strong>Title: </strong><span class="title">Title</span>
+    </p>
+    <p><strong>Author:</strong><span class="salary">Author</span></p>
+    <a class="details-btn" href="/details/${offer._id}">Details</a>
+    </div>
+    </main>
+{% endblock %}

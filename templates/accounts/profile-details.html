@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+{% block content %}
+      <!-- Start Profile Details Section -->
+        <div class="profile">
+
+            <!-- Start Profile Personal Data Section -->
+            <div class="profile-data">
+                <div class="profile_img">
+                    <div class="image">
+
+                        <!-- Profile Image -->
+                        <img src="" alt="img8">
+                    </div>
+                </div>
+                <div class="personal">
+                    <div class="edit">
+                        <!-- User Username -->
+                        <p>d_kalaydzhiev</p>
+
+                        <!-- IF the viewer is the owner of the profile -->
+                        <!-- Link to Edit Profile Page -->
+                        <a href="#">
+                            <img class="edit-img" src="" alt="edit button">
+                        </a>
+
+                        <!-- Link to Delete Profile Page -->
+                        <a href="">
+                            <img class="bin-img" src="" alt="bin button">
+                        </a>
+                        <!-- End IF the viewer is the owner of the profile -->
+
+                    </div>
+                    <div class="data">
+
+                        <!-- Total Number of Photos by the User -->
+                        <span>4</span>
+                        <p>photos</p>
+
+                        <!-- Total Number of Pets owned by the User -->
+                        <span>7</span>
+                        <p>pets</p>
+
+                        <!-- Total Number of Likes for the User -->
+                        <span>436</span>
+                        <p>likes</p>
+                    </div>
+                    <!-- User First and Last Name IF Added -->
+                    <h3 class="names">Diyan Kalaydziev</h3>
+
+                    <!-- User Email Address -->
+                    <p class="email">d.denov@gmail.com</p>
+
+                    <!-- User Gender IF Added -->
+                    <p class="gender">Male</p>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

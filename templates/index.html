@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <a href="#">
+                <a href="{% url 'index' %}">
                     <img width="150px"
                          src="{% static 'images/logo.jpg' %}" alt="img">
                 </a>
@@ -26,6 +26,7 @@
 
                     <li class="nav-item"><a href="{% url 'about_page' %}"><i>About</i></a></li>
                     <li class="nav-item"><a href="{% url 'catalogue' %}"><i>Collection</i></a></li>
+                    <li class="nav-item"><a href="{% url 'add-new-book' %}"><i>Add book</i></a></li>
                     <li class="nav-item"><a href="{% url 'login' %}"><i>Log in</i></a></li>
                     <li class="nav-item"><a href="{% url 'register' %}"><i>Register</i></a></li>
                     <li class="nav-item"><a href="{% url 'profile-details' %}"><i>Profile</i></a></li>

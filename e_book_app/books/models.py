@@ -1,6 +1,4 @@
-from enum import unique
-
-from django.core.validators import MinLengthValidator
+from django.core.validators import MinLengthValidator, MinValueValidator
 from django.db import models
 from django.template.defaultfilters import slugify
 
@@ -25,7 +23,19 @@ class Book(models.Model):
             MinLengthValidator(10)
         ],
     )
+
+    price = models.DecimalField(
+        decimal_places=2,
+        max_digits=7,
+        blank=True,
+        null=True,
+        validators=[
+            MinValueValidator(0, message="Price must be higher than 0")
+        ]
+    )
+
     book_photo = models.URLField()
+
     slug = models.SlugField(
         unique=True,
         editable=False

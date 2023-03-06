@@ -1,15 +1,18 @@
 {% extends 'index.html' %}
 
 {% block content %}
-{#    Multiple this card for each book in database#}
+    {#    Multiple this card for each book in database#}
     <main>
-        <div class="book-card">
-    <img src="" alt="book photo" />
-    <p>
-        <strong>Title: </strong><span class="title">Title</span>
-    </p>
-    <p><strong>Author:</strong><span class="salary">Author</span></p>
-    <a class="details-btn" href="/details/${offer._id}">Details</a>
-    </div>
+        {% for book in all_books %}
+            <div class="book-card">
+                <img width="300" src="{{ book.book_photo }}" alt="book photo"/>
+                <p>
+                    <strong>Title: </strong><span>{{ book.title }}</span>
+                </p>
+                <p><strong>Author:</strong><span>{{ book.author }}</span></p>
+                <p><strong>Price:</strong><span>{{ book.price }}</span></p>
+                <a class="details-btn" href="{% url 'book_details' book.pk %}">Book details</a>
+            </div>
+        {% endfor %}
     </main>
 {% endblock %}

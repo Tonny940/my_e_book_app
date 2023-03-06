@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+    <main>
+        <div class="add-edit-book">
+            <div class="edit-delete edit-book">
+                <h2>Add new book</h2>
+
+                <form action="{% url 'add-new-book' %}" method="post">
+                    {{ form.as_p }}
+                    <button class="add-btn" type="submit">Add Book</button>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

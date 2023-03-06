@@ -1,0 +1,37 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <!--Details Page-->
+    <section id="detailsPage">
+        <h1>Book Details</h1>
+        <div class="wrapper">
+
+            <div class="bookCover">
+                <!-- Album Image -->
+                <img width="300"  src="{{ book.book_photo }}">
+            </div>
+
+            <div class="bookInfo">
+
+                <div class="bookText">
+                    <!-- Album Info -->
+                    <h1>Name: {{ book.title }}</h1>
+                    <h3>Author: {{ book.author }}</h3>
+                    <h4>Published on: {{ book.date_of_publishing}}</h4>
+                    {% if book.description %}
+                        <p>Description: {{ book.description }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="actionBtn">
+{##}
+                    <a href="{% url 'edit-book' pk=book.pk %}" class="edit">Edit</a>
+{#                    <a href="{% url 'delete album' pk=album.pk %}" class="remove">Delete</a>#}
+                </div>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

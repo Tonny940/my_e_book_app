@@ -3,20 +3,17 @@
 
 {% block content %}
 
-    <!--Details Page-->
     <section id="detailsPage">
         <h1>Book Details</h1>
         <div class="wrapper">
 
             <div class="bookCover">
-                <!-- Album Image -->
                 <img width="300"  src="{{ book.book_photo }}">
             </div>
 
             <div class="bookInfo">
 
                 <div class="bookText">
-                    <!-- Album Info -->
                     <h1>Name: {{ book.title }}</h1>
                     <h3>Author: {{ book.author }}</h3>
                     <h4>Published on: {{ book.date_of_publishing}}</h4>
